@@ -95,11 +95,6 @@
 //!  shutdown gracefully.
 #![warn(missing_docs)]
 
-extern crate futures;
-extern crate tokio;
-
-#[macro_use] extern crate log;
-
 mod bind;
 mod traits;
 mod sleep_on_error;

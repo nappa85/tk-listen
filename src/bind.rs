@@ -4,12 +4,12 @@ use std::mem;
 use std::net::SocketAddr;
 use std::time::Duration;
 
-use futures::{Future, Stream, Async};
+use tokio::prelude::{Future, Stream, Async};
 use tokio::net::{TcpListener, Incoming, TcpStream};
 use tokio::clock;
 use tokio::timer::Delay;
 
-
+use log::{info, debug, error};
 
 /// This stream replaces ``tokio_core::net::Incoming`` and listens many sockets
 ///

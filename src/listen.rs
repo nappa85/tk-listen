@@ -1,7 +1,7 @@
 use std::marker::PhantomData;
 
-use futures::{Stream, Future, IntoFuture, Async};
-use futures::stream::BufferUnordered;
+use tokio::prelude::{Stream, Future, IntoFuture, Async};
+use tokio::prelude::stream::BufferUnordered;
 
 
 /// This is basically `.then(|_| Ok(()))`, but we can't name a closure

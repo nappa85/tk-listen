@@ -1,10 +1,3 @@
-extern crate tokio;
-extern crate futures;
-extern crate tk_listen;
-extern crate env_logger;
-
-#[macro_use] extern crate log;
-
 use std::io::Write;
 use std::env;
 use std::time::Duration;
@@ -13,10 +6,11 @@ use tokio::clock;
 use tokio::net::TcpListener;
 use tokio::runtime::run;
 use tokio::timer::Delay;
-use futures::{Future, Stream};
+use tokio::prelude::{Future, Stream};
 
 use tk_listen::ListenExt;
 
+use log::error;
 
 fn main() {
     if env::var("RUST_LOG").is_err() {

@@ -1,9 +1,9 @@
 use std::time::Duration;
 
-use futures::{Stream, IntoFuture};
+use tokio::prelude::{Stream, IntoFuture};
 
-use sleep_on_error;
-use listen;
+use crate::sleep_on_error;
+use crate::listen;
 
 
 /// An extension trait that provides necessary combinators for turning

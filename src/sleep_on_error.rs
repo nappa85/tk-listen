@@ -1,10 +1,11 @@
 use std::io;
 use std::time::Duration;
 
-use futures::{Future, Stream, Async};
+use tokio::prelude::{Future, Stream, Async};
 use tokio::clock;
 use tokio::timer::Delay;
 
+use log::debug;
 
 /// This function defines errors that are per-connection. Which basically
 /// means that if we get this error from `accept()` system call it means
